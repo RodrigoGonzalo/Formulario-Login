@@ -1,0 +1,186 @@
+/*Fonte importada do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.ImagemFundo{
+    background: url('bg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.ImagemFundo::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.Conteudo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Conteudo header{
+    color: antiquewhite;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Campo {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.Campo span{
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+
+.Campo input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#222;
+    font-size: 16px;
+}
+
+.Senha{
+    margin-top: 16px;
+}
+
+.Mostrar{
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    display: none;
+    cursor: pointer;
+    font-family: 'Monteserrat', sans-serif;
+}
+
+.Password:valid ~ .Mostrar{
+    display: block;
+}
+
+.EsqueceuSenha{
+    text-align: left;
+    margin: 10px 0;
+}
+
+.EsqueceuSenha a{
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.EsqueceuSenha:hover{
+    text-decoration: underline;
+}
+
+.Campo input[type="submit"]{
+    background: #3498db;
+    border: 1px solid #2691d9;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Monteserrat', sans-serif;
+}
+
+.Campo input[type="submit"]:hover{
+    background: #2691d9;
+}
+
+.Alternativa{
+    color: white;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Links{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.Facebook, .Instagram{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 10px;
+}
+
+.Facebook{
+    margin-left: 0;
+    background: #4267b2;
+    border: 1px solid #3e61a8;
+}
+
+.Instagram{
+    background: #e1306c;
+    border: 1px solid #df2060;
+}
+
+.Facebook:hover{
+    background: #3e61a8;
+}
+
+.Instagram:hover{
+    background: #df2060;
+}
+
+.Links i{
+    font-size: 17px;
+}
+
+i span{
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Cadastrar{
+    font-size: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Cadastrar a{
+    color: #3498db;
+    text-decoration: none;
+}
+
+.Cadastrar a:hover{
+    text-decoration: underline;
+}
