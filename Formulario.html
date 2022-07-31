@@ -12,8 +12,6 @@
     <!--Link do Arquivo CSS do FontAwsome-->
     <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.1.1-web/css/all.min.css">
 
-    <!--Link do Arquivo Javascript-->
-    <script type="text/javascript" language="javascript" src="./js/formulario.js"></script>
 </head>
 <body>
     <!--Começo do Formulário-->
@@ -23,18 +21,18 @@
             <form action="#">
                 <div class="Campo">
                     <span class="fa-solid fa-user"></span>
-                    <input type="text" required placeholder="Email ou Telefone">
+                    <input type="text" required placeholder="Email ou Telefone" id="CampoEmail">
                 </div>
-                <div class="CampoSenha">
+                <div class="Campo Senha">
                     <span class="fa-solid fa-lock"></span>
-                    <input type="password" class="Senha" required placeholder="Senha">
+                    <input type="password" class="Password" required placeholder="Senha" id="CampoSenha">
                     <span class="Mostrar">Mostrar</span>
                 </div>
                 <div class="EsqueceuSenha">
                     <a href="#">Esqueceu sua Senha ?</a>
                 </div>
-                <div class="Enviar">
-                    <input type="submit" value="Login">
+                <div class="Campo">
+                    <input type="submit" value="Login" id="Enviar">
                 </div>
             </form>
             <div class="Alternativa">
@@ -55,5 +53,25 @@
         </div>
     </div>
     <!--Fim do Formulário-->
+    <script>
+        const Senha = document.querySelector('.Password');
+        const MostrarSenha = document.querySelector('.Mostrar');
+
+        MostrarSenha.addEventListener('click', function(){
+            if(Senha.type === "password"){
+                Senha.type = "text";
+                MostrarSenha.textContent = "HIDE";
+                MostrarSenha.style.color = "#3498db";
+            }
+            else{
+                Senha.type = "password";
+                MostrarSenha.textContent = "SHOW";
+                MostrarSenha.style.color = "#222";
+        }});
+
+        
+
+       
+    </script>
 </body>
 </html>
